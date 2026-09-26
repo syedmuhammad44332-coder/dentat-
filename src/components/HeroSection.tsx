@@ -17,11 +17,14 @@ const TREATMENT_TAGS = [
   'Retainers',
 ];
 
+const FALLBACK_DOCTOR_IMAGE = '/assets/images/doctor_portrait_elena_1790414686311.jpg';
+
 export const HeroSection: React.FC<HeroSectionProps> = ({
   onBookAppointment,
   onSelectTreatment,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [doctorImgSrc, setDoctorImgSrc] = useState<string>(CLINIC_IMAGES.doctorElena);
 
   // Easing specified in requirements
   const premiumEase = [0.22, 1, 0.36, 1] as const;
@@ -185,9 +188,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl overflow-hidden bg-slate-100 shrink-0 shadow-inner"
                       >
                         <img
-                          src={CLINIC_IMAGES.doctorElena}
+                          src={doctorImgSrc}
                           alt="Dr. Elena Vance"
-                          referrerPolicy="no-referrer"
+                          width={72}
+                          height={72}
+                          loading="eager"
+                          decoding="async"
+                          onError={() => {
+                            if (doctorImgSrc !== FALLBACK_DOCTOR_IMAGE) {
+                              setDoctorImgSrc(FALLBACK_DOCTOR_IMAGE);
+                            }
+                          }}
                           className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                         />
                         <span className="absolute bottom-1 right-1 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full" />
@@ -204,11 +215,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           Dr. Elena Vance, DDS
                         </h4>
                         <p className="text-xs text-slate-500 truncate">
-                          Lead Prosthodontist · Columbia
+                          Lead Prosthodontist
                         </p>
                         <div className="mt-1 flex items-center gap-1.5 text-xs text-teal-700 font-medium">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-teal-600" />
-                          <span>Accepting New Patients</span>
+                          <CheckCircle2 className="w-3.5 h-3.5 text-teal-600 shrink-0" />
+                          <span>Accepting Patients</span>
                         </div>
                       </motion.div>
                     </div>

@@ -1,4 +1,12 @@
 import { Doctor, Treatment, BlogPost } from '../types';
+import doctorElenaImg from '../assets/images/doctor_portrait_elena_1790414686311.jpg';
+import heroClinicImg from '../assets/images/hero_dental_clinic_1790414648857.jpg';
+import featuredRoomImg from '../assets/images/featured_clinic_room_1790414668007.jpg';
+import whyChooseImg from '../assets/images/why_choose_precision_1790414699479.jpg';
+import trustSmileImg from '../assets/images/trust_patient_smile_1790414711991.jpg';
+import blogDigitalSmileImg from '../assets/images/blog_digital_smile_1790414732085.jpg';
+import blogClearAlignerImg from '../assets/images/blog_clear_aligner_1790414748909.jpg';
+import blogGumWellnessImg from '../assets/images/blog_gum_wellness_1790414764877.jpg';
 
 export const DOCTORS: Doctor[] = [
   {
@@ -8,7 +16,7 @@ export const DOCTORS: Doctor[] = [
     credentials: 'Columbia University · 14+ Years Clinical Excellence',
     rating: 4.9,
     reviewsCount: 1240,
-    avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    avatar: doctorElenaImg,
     specialty: 'Aesthetic Reconstruction & Digital Ceramics',
   },
   {
@@ -18,7 +26,7 @@ export const DOCTORS: Doctor[] = [
     credentials: 'Harvard Dental Medicine · 11+ Years Experience',
     rating: 4.95,
     reviewsCount: 890,
-    avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    avatar: doctorElenaImg,
     specialty: '3D Invisible Clear Aligners & Bio-Mechanics',
   },
   {
@@ -28,7 +36,7 @@ export const DOCTORS: Doctor[] = [
     credentials: 'UPenn School of Dental Medicine · 9+ Years',
     rating: 4.88,
     reviewsCount: 760,
-    avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    avatar: doctorElenaImg,
     specialty: 'Microscopic Gum Therapy & Biomimetic Regeneration',
   },
 ];
@@ -94,11 +102,11 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Dr. Elena Vance',
       role: 'Lead Prosthodontist',
-      avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+      avatar: doctorElenaImg,
     },
     readTime: '4 min read',
     date: 'March 2026',
-    image: '/src/assets/images/blog_digital_smile_1790414732085.jpg',
+    image: blogDigitalSmileImg,
     excerpt: 'Explore how optical structured-light scanning captures 6,000 frames per second to render micron-accurate dental models in under two minutes.',
   },
   {
@@ -108,11 +116,11 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Dr. Marcus Chen',
       role: 'Specialist Orthodontist',
-      avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+      avatar: doctorElenaImg,
     },
     readTime: '5 min read',
     date: 'March 2026',
-    image: '/src/assets/images/blog_clear_aligner_1790414748909.jpg',
+    image: blogClearAlignerImg,
     excerpt: 'An evidence-based comparison of multi-layer viscoelastic polymers against stainless brackets for predictable tooth movement and gum health.',
   },
   {
@@ -122,19 +130,19 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Dr. Sophia Reyes',
       role: 'Periodontist',
-      avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+      avatar: doctorElenaImg,
     },
     readTime: '3 min read',
     date: 'February 2026',
-    image: '/src/assets/images/blog_gum_wellness_1790414764877.jpg',
+    image: blogGumWellnessImg,
     excerpt: 'Recent clinical trials demonstrate that eliminating subgingival bacteria reduces systemic inflammatory markers by up to 34%.',
   },
 ];
 
 export const CLINIC_IMAGES = {
-  hero: '/src/assets/images/hero_dental_clinic_1790414648857.jpg',
-  featured: '/src/assets/images/featured_clinic_room_1790414668007.jpg',
-  doctorElena: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
-  whyChoose: '/src/assets/images/why_choose_precision_1790414699479.jpg',
-  trustSmile: '/src/assets/images/trust_patient_smile_1790414711991.jpg',
+  hero: heroClinicImg,
+  featured: featuredRoomImg,
+  doctorElena: doctorElenaImg,
+  whyChoose: whyChooseImg,
+  trustSmile: trustSmileImg,
 };

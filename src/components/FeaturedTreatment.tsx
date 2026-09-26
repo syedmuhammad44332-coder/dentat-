@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'motion/react';
 import { Star, Shield, ArrowUpRight, Award, CheckCircle } from 'lucide-react';
 import { CLINIC_IMAGES, TREATMENTS } from '../data/dentalData';
@@ -16,6 +16,7 @@ export const FeaturedTreatment: React.FC<FeaturedTreatmentProps> = ({
 }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.25 });
+  const [doctorImgSrc, setDoctorImgSrc] = useState<string>(CLINIC_IMAGES.doctorElena);
 
   const premiumEase = [0.22, 1, 0.36, 1] as const;
 
@@ -106,9 +107,17 @@ export const FeaturedTreatment: React.FC<FeaturedTreatmentProps> = ({
                     className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden bg-slate-200 shrink-0"
                   >
                     <img
-                      src={CLINIC_IMAGES.doctorElena}
+                      src={doctorImgSrc}
                       alt="Dr. Elena Vance"
-                      referrerPolicy="no-referrer"
+                      width={64}
+                      height={64}
+                      loading="lazy"
+                      decoding="async"
+                      onError={() => {
+                        if (doctorImgSrc !== '/assets/images/doctor_portrait_elena_1790414686311.jpg') {
+                          setDoctorImgSrc('/assets/images/doctor_portrait_elena_1790414686311.jpg');
+                        }
+                      }}
                       className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                     />
                   </motion.div>
