@@ -1,0 +1,140 @@
+import { Doctor, Treatment, BlogPost } from '../types';
+
+export const DOCTORS: Doctor[] = [
+  {
+    id: 'dr-elena-vance',
+    name: 'Dr. Elena Vance, DDS',
+    role: 'Lead Prosthodontist & Implantologist',
+    credentials: 'Columbia University · 14+ Years Clinical Excellence',
+    rating: 4.9,
+    reviewsCount: 1240,
+    avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    specialty: 'Aesthetic Reconstruction & Digital Ceramics',
+  },
+  {
+    id: 'dr-marcus-chen',
+    name: 'Dr. Marcus Chen, DMD',
+    role: 'Specialist Orthodontist',
+    credentials: 'Harvard Dental Medicine · 11+ Years Experience',
+    rating: 4.95,
+    reviewsCount: 890,
+    avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    specialty: '3D Invisible Clear Aligners & Bio-Mechanics',
+  },
+  {
+    id: 'dr-sophia-reyes',
+    name: 'Dr. Sophia Reyes, DDS',
+    role: 'Periodontist & Laser Surgeon',
+    credentials: 'UPenn School of Dental Medicine · 9+ Years',
+    rating: 4.88,
+    reviewsCount: 760,
+    avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    specialty: 'Microscopic Gum Therapy & Biomimetic Regeneration',
+  },
+];
+
+export const TREATMENTS: Treatment[] = [
+  {
+    id: 'dental-checkup',
+    name: 'Dental Checkup',
+    category: 'Preventive Care',
+    duration: '45 mins',
+    painRating: '0/10 Painless',
+    description: 'High-definition 3D intraoral digital mapping, infrared cavity transillumination, and gentle clinical evaluation without uncomfortable metal probes.',
+    technology: 'AI-assisted Caries Detection & 4K Imaging',
+    benefits: ['Zero-radiation optical scanning', 'Early-stage micro-decay detection', 'Personalized prevention plan'],
+  },
+  {
+    id: 'teeth-cleaning',
+    name: 'Teeth Cleaning',
+    category: 'Hygiene & Wellness',
+    duration: '40 mins',
+    painRating: '0/10 Comfort Care',
+    description: 'Ultrasonic airflow guided biofilm therapy using warm pressurized water and micro-fine erythritol powder for deep gentle stain removal.',
+    technology: 'Guided Biofilm Therapy (GBT) Swiss System',
+    benefits: ['100% enamel safe', 'Gentle warm water delivery', 'Instant surface brightening'],
+  },
+  {
+    id: 'tooth-filling',
+    name: 'Tooth Filling',
+    category: 'Restorative Care',
+    duration: '50 mins',
+    painRating: '1/10 Computerized Numbing',
+    description: 'Biomimetic nano-hybrid composite resin sculpted under high magnification to seamlessly replicate natural dental anatomy, translucency, and strength.',
+    technology: 'Microscopic Layering & Computerized Single-Tooth Anesthesia',
+    benefits: ['Monolithic tooth bond', 'Color-matched natural translucency', 'Mercury & BPA free'],
+  },
+  {
+    id: 'gum-treatment',
+    name: 'Gum Treatment',
+    category: 'Periodontics',
+    duration: '60 mins',
+    painRating: '0/10 Laser Precision',
+    description: 'Targeted waterlase laser decontamination that cleans periodontal pockets and stimulates collagen regeneration without surgical incisions.',
+    technology: 'Dual-Wavelength Er,Cr:YSGG Laser',
+    benefits: ['No scalpels or sutures', 'Accelerated cellular healing', 'Eliminates 99.9% of harmful bacteria'],
+  },
+  {
+    id: 'retainers',
+    name: 'Retainers',
+    category: 'Orthodontics',
+    duration: '30 mins',
+    painRating: '0/10 Gentle Fit',
+    description: 'Ultra-thin, crystal-clear retention appliances custom thermoformed from medical-grade dual-layer polymer for durable smile preservation.',
+    technology: 'Precision 3D Printed Models & Optical Fit Analysis',
+    benefits: ['Near-invisible optical clarity', 'Crack-resistant smart polymer', 'Comfortable night wear'],
+  },
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: '3d-intraoral-scanning',
+    title: 'How 3D Intraoral Scanning Eliminates Uncomfortable Impression Trays',
+    category: 'Digital Dentistry',
+    author: {
+      name: 'Dr. Elena Vance',
+      role: 'Lead Prosthodontist',
+      avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    },
+    readTime: '4 min read',
+    date: 'March 2026',
+    image: '/src/assets/images/blog_digital_smile_1790414732085.jpg',
+    excerpt: 'Explore how optical structured-light scanning captures 6,000 frames per second to render micron-accurate dental models in under two minutes.',
+  },
+  {
+    id: 'clear-aligners-breakdown',
+    title: 'Clear Aligners vs Traditional Braces: The Clinical Biomaterials Breakdown',
+    category: 'Orthodontics',
+    author: {
+      name: 'Dr. Marcus Chen',
+      role: 'Specialist Orthodontist',
+      avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    },
+    readTime: '5 min read',
+    date: 'March 2026',
+    image: '/src/assets/images/blog_clear_aligner_1790414748909.jpg',
+    excerpt: 'An evidence-based comparison of multi-layer viscoelastic polymers against stainless brackets for predictable tooth movement and gum health.',
+  },
+  {
+    id: 'periodontal-health-systemic',
+    title: 'The Systemic Connection: How Periodontal Health Shields Cardiovascular Wellness',
+    category: 'Preventive Care',
+    author: {
+      name: 'Dr. Sophia Reyes',
+      role: 'Periodontist',
+      avatar: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+    },
+    readTime: '3 min read',
+    date: 'February 2026',
+    image: '/src/assets/images/blog_gum_wellness_1790414764877.jpg',
+    excerpt: 'Recent clinical trials demonstrate that eliminating subgingival bacteria reduces systemic inflammatory markers by up to 34%.',
+  },
+];
+
+export const CLINIC_IMAGES = {
+  hero: '/src/assets/images/hero_dental_clinic_1790414648857.jpg',
+  featured: '/src/assets/images/featured_clinic_room_1790414668007.jpg',
+  doctorElena: '/src/assets/images/doctor_portrait_elena_1790414686311.jpg',
+  whyChoose: '/src/assets/images/why_choose_precision_1790414699479.jpg',
+  trustSmile: '/src/assets/images/trust_patient_smile_1790414711991.jpg',
+};
